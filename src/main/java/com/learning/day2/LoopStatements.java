@@ -121,7 +121,7 @@ public class LoopStatements {
         }
 
 
-        // 1. Write a Java program that takes an integer as input and prints whether the number is positive, negative, or zero using if-else conditions.
+        // 1. Write a Java program that takes an integer as input and prints whether the number is positive, negative, or zero using if-else conditions. - 12 marks
         // 2. Write a Java program to check if a given number is odd or even using if-else conditions.
         // 3. Write a Java program that takes a score (0-100) as input and prints the corresponding grade using if-else conditions. For example:
         //    90-100: A
@@ -140,7 +140,20 @@ public class LoopStatements {
 
 //        6. Write a Java program that takes an integer N as input and calculates the sum of the first N natural numbers using a while loop.
 //        7. Write a Java program that takes an integer as input and prints its multiplication table up to 10 using a for loop.
-//        8. Write a Java program to print all prime numbers between 1 and 100 using a for loop and nested loops.
+//        8. Write a Java program to print all prime numbers between 1 and 100 using a  nested for loops.
+
+
+
+        int N = 43;
+        int i =1;
+        int sum = 0;
+
+        while(i <= N){
+            sum = sum+ i;    // 1, 1+2 = 3, 3+3 =6, 6+4 =10, 10+5=15  ...........................946
+            i++;             // 2 , 3, 4, 5.............43
+        }
+        System.out.println(sum); // 1+2+3+4+5+6..............43 = 946
+
 
     }
 }
