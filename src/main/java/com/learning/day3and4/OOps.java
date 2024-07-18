@@ -1,4 +1,4 @@
-package com.learning.day3;
+package com.learning.day3and4;
 
 public class OOps {
     public static void main(String[] args) {
@@ -60,14 +60,37 @@ public class OOps {
         toyota.millage = 20000;
         toyota.model = "camry";
         toyota.price = 25000.99;
+        toyota.speed = 30;
         System.out.println(toyota.color);
         System.out.println(toyota.price);
         System.out.println(toyota.millage);
 
-        toyota.drive();
+
+        toyota.drive(); // pick bottles
         toyota.accelerate();
         toyota.decelerate();
-        toyota.stop();
+
+        int updatedSpeed =  toyota.accelerateBy10();
+
+        System.out.println(updatedSpeed);
+
+         String modelOfCar = toyota.getModel();
+
+        System.out.println(modelOfCar);   // variable
+
+        System.out.println(toyota.getModel());   // direct
+
+
+        updatedSpeed =  toyota.accelerateBy10();
+        System.out.println(updatedSpeed);
+        System.out.println( Car.noOfWheels);
+
+        toyota.changeSpeed(80);  // void type
+
+         System.out.println(toyota.speed);
+
+        System.out.println( toyota.changeSpeedByReturnType(30));  // returnType
+
 
         Car lexus = new Car();    // different memory location
 
@@ -90,5 +113,39 @@ public class OOps {
 //        Objects   => dialySheet, weeklySheet, monthlySheet
 //------------------------------------------------------------------------------------------------------------------------
 
+        // returnType Method
+//        public returnType methodNAme(){
+//
+//         return keyword need sto be here expect in void case.
+//        }
+
+//          different return types
+//            void  => we are not returning anything from that method
+//            dataType in void place.
+
+
     }
+
+    public int addTwoNumbers(){
+
+        return 10+15;
+    }
+
+
+    // input parameters for methods
+
+    public void methodName( int a, int b){
+
+    }
+
+
+
+
+//    public returnType methodName(inputDatatype inputParameter){
+//        // code
+//        // if its not a void return type // we use return keyword to return the data.
+//    }
+
+
+
 }

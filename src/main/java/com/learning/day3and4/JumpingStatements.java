@@ -1,4 +1,4 @@
-package com.learning.day3;
+package com.learning.day3and4;
 
 public class JumpingStatements {
 
