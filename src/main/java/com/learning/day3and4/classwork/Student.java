@@ -11,8 +11,6 @@ public class Student {
     static  String schoolName;
 
 
-
-
     public static void updateSchoolName(){
 
     }
