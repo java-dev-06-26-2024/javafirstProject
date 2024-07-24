@@ -14,17 +14,17 @@ public class Phone {
 //   }
 
 
-   public Phone(String inputColor, String inputModel, String inputOS, double inputPrice){
-       color = inputColor;
-       model = inputModel;
-       Os = inputOS;
-       price = inputPrice;
+   public Phone(String color, String model, String Os, double price){
+       this.color = color;
+       this.model = model;
+       this.Os = Os;
+       this.price = price;
    }
 
 
 
-    public void updateColor(String inputColor){
-        color = inputColor;
+    public void setColor(String color){
+        this.color = color;
     }
 
     public String getColor(){

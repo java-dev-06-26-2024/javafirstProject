@@ -48,6 +48,11 @@ public class ConstructorsIntro {
 
 
 
+        // Keyword : "this"
+        // this keyword refers to the current Object(itself) in a method or constructor.
+        // -> "this" keyword is used to eliminate the confusion between attributes and input parameters.
+
+
         // Weekend Homework.
         //  1. Write a Java program to find the largest among three numbers.
         //  2. Write a Java program to check if a character is a vowel or consonant
