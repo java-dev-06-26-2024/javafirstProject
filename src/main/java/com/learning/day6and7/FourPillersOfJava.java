@@ -78,6 +78,7 @@ public class FourPillersOfJava {
             person.setAddress("sadfghjkl;");
 
 
+
             Student student1 = new Student();
             student1.setId(2);
             student1.setName("Joy");
@@ -124,8 +125,44 @@ public class FourPillersOfJava {
 //        Abstraction -> hiding the implementation.
 
         // 1. using private methods.
-        // 2. Interfaces
-        // 3. Abstract Classes
+        // 2. Abstract Classes
+        // 3. Interfaces
+
+
+        // homework - july 24th
+        //   2 Examples - Inheritance Examples
+        //   2 Examples - Polymorphism - Method Overloading.
+        //   2 Examples - Polymorphism - Method Overriding.
+        //   1 Examples - Abstraction using private methods.
+
+
+//        what is abstract class ?
+//        we will use a keyword "abstract".
+//        Abstract methods can only be created inside a abstract class
+//        Abstract Classes can have both regular methods and Abstract methods.
+//        Whatever class that is extending from abstract class need to provide the implementation for abstract methods.
+
+//        what abstract method ?
+//        we will use a keyword "abstract".
+//        abstract methods will not have a body.
+
+
+
+//        what is Interface ?
+//        this is another way to achieve abstraction.
+//        An Interface is a completely Abstract Class, means only Abstract methods are allowed.
+//             to access the interface methods, the interface must be implemented by another class.
+//        we use the keyword "implements".
+
+//        Rules :
+//        Interfaces can not be used to create Objects.
+//        Interfaces can only have abstract methods.
+//        Whatever class that is implementation the interface need to provide the implementation for abstract methods.
+//        In interface by default all the methods are public.
+//        In Interface, we can not contain a constructor.
+//        In Interface, attributes are public and static and final.
+
+
 
 
     }

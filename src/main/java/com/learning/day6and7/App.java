@@ -39,9 +39,17 @@ public class App {
         la.setSsn("98765432");
         la.setName("Rayn");
         System.out.println(la.calculateRate());
+        System.out.println(la.BANK_NAME);
 
 
+        RoboDog d1 = new RoboDog();
+        d1.info();
+        System.out.println( d1.kind);
+        System.out.println(RoboDog.kind);
 
+        RoboDog c2 = new RoboDog();
+        c2.play();
+        Animal f2 = new Fish();
 
     }
 }

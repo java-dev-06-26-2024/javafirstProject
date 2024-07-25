@@ -9,4 +9,6 @@ public class Iphone extends Phone{
     public void camera() {
         System.out.println("taking a pictute using :"+ camera1 +" "+ camera2);
     }
+
+
 }

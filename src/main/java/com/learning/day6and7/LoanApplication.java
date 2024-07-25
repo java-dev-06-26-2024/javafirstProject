@@ -1,7 +1,7 @@
 package com.learning.day6and7;
 
 public class LoanApplication {
-
+   final String BANK_NAME = "ABC Bank";
     private double loanAmount;
     private String name;
     private  String ssn;
