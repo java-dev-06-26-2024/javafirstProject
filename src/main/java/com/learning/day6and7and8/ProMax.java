@@ -1,4 +1,4 @@
-package com.learning.day6and7;
+package com.learning.day6and7and8;
 
 public class ProMax extends  Iphone{
     String camara3;

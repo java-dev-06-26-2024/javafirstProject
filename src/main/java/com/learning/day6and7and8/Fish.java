@@ -1,10 +1,9 @@
-package com.learning.day6and7;
+package com.learning.day6and7and8;
 
-public class Cat  extends  Animal{
-
+public class Fish extends Animal{
     @Override
     public void sound() {
-        System.out.println("meow");
+        System.out.println("bob");
     }
 
     @Override
@@ -14,6 +13,6 @@ public class Cat  extends  Animal{
 
     @Override
     public void moving() {
-        System.out.println("walking");
+        System.out.println("swimming");
     }
 }
