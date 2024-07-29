@@ -4,7 +4,13 @@ import java.util.Scanner;
 
 public class SchoolApp {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
+
+
+        School[] schools = new School[10];
+        User[]  users = new User[10];
+        int positionSchool =0;
+        int positionOfUser =0;
 
         Scanner  scannerObj = new Scanner(System.in);
 
@@ -13,8 +19,10 @@ public class SchoolApp {
         while(!stop){
             System.out.println("1: do you want to create a School ?");
             System.out.println("2: do you want to register? ");
-            System.out.println("3: do you want to Exit ?");
+            System.out.println("3: show all schools");
+            System.out.println("4: do you want to Exit ?");
             int option = scannerObj.nextInt();
+            Thread.sleep(1000);
             scannerObj.nextLine();
 
             if( option == 1){
@@ -52,7 +60,13 @@ public class SchoolApp {
 
                 School school1 = new School(schoolId, schoolName, noOfStudents, schoolRating, schoolFee, noOfTeachers);
 
-                System.out.println(school1);
+             if(  positionSchool < schools.length){
+                 schools[positionSchool] = school1;
+                 positionSchool++;
+                 System.out.println(school1);
+             }else{
+                 System.out.println("All the positions are filled");
+             }
 
 
             }else if (option == 2){
@@ -77,7 +91,16 @@ public class SchoolApp {
 
                 System.out.println(user1);
 
-            }else if(option == 3 ){
+
+
+            }else if(option == 3){
+                // logic to print all schools
+                for (int index =0; index < positionSchool; index++){
+                    System.out.println(schools[index]);
+                }
+
+            }
+            else if(option == 4 ){
                 // logic to exit;
                 System.out.println("Exit");
                 stop = true;

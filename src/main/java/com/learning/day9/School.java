@@ -1,5 +1,7 @@
 package com.learning.day9;
 
+import java.util.Objects;
+
 public class School {
 
     private int schoolId;
@@ -76,5 +78,25 @@ public class School {
                 ", schoolFee=" + schoolFee +
                 ", noOfTeachers=" + noOfTeachers +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        School school = (School) o;
+        return schoolId == school.schoolId && noOfStudents == school.noOfStudents && Double.compare(schoolRating, school.schoolRating) == 0 && Double.compare(schoolFee, school.schoolFee) == 0 && noOfTeachers == school.noOfTeachers && Objects.equals(schoolName, school.schoolName);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = schoolId;
+        result = 31 * result + Objects.hashCode(schoolName);
+        result = 31 * result + noOfStudents;
+        result = 31 * result + Double.hashCode(schoolRating);
+        result = 31 * result + Double.hashCode(schoolFee);
+        result = 31 * result + noOfTeachers;
+        return result;
     }
 }
