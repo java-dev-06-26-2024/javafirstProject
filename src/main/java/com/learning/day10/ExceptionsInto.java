@@ -6,22 +6,22 @@ public class ExceptionsInto {
 
     public static void main(String[] args) {
 
-        // Exceptions : abnormal termination of Program.
+        // Exceptions: abnormal termination of Program.
 
-//        Types of Exceptions :
+//        Types of Exceptions:
 //             1. Checked Exceptions
 //                         -> checked Exceptions can be checked at compile time, Extends the "Exception" class.
 //                         -> methods that might throw a checked Exception must declare it in their "throws" clause.
 //                         -> handle using try/ catch block.
 //             2. Unchecked Exceptions
 //                          -> not checked at compile time., Extends the "RuntimeException" class
-//                          -> methods that might throw a unchecked Exception, no need to declare it in their "throws" clause.
+//                          -> methods that might throw an unchecked Exception, no need to declare it in their "throws" clause.
 //                          -> caught explicitly.
 
 //         Ways to print Exception :
 //         printStackTrace() : ExceptionClassName , message, location of Exception.
 //         getMessage()  : message
-//         directly print the exception : ExceptionClassName message
+//         directly print the exception: ExceptionClassName message
 
 
 //           Exceptions Hierarchy:
@@ -34,8 +34,9 @@ public class ExceptionsInto {
 //           ArrayIndexOutOfBoundExceptions
 //           StringIndexOutOfBoundExceptions.
 
-//        Exception Handling : Inorder to stop the abnormal termination of program, we use Exception Handling.
+//        Exception Handling: Inorder to stop the abnormal termination of program, we use Exception Handling.
 //                              try/Catch and finally.
+//          Finally, always get executed no matter if try and catch block executed or not.
 
 
 //        Errors:
