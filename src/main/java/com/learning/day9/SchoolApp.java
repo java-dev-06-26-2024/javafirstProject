@@ -1,6 +1,8 @@
 package com.learning.day9;
 
 import java.util.ArrayList;
+import java.util.InputMismatchException;
+import java.util.Objects;
 import java.util.Scanner;
 
 public class SchoolApp {
@@ -28,40 +30,42 @@ public class SchoolApp {
             Thread.sleep(1000);
             scannerObj.nextLine();
 
-            if( option == 1){
-//                private int schoolId;
+
+            switch (option){
+                case 1:
+                    //                private int schoolId;
 //                private String schoolName;
 //                private int noOfStudents;
 //                private double schoolRating;
 //                private double schoolFee;
 //                private  int noOfTeachers;
 
-                System.out.println("Enter the school Id :");
-                int schoolId = scannerObj.nextInt();
-                scannerObj.nextLine();
+                    System.out.println("Enter the school Id :");
+                    int schoolId = scannerObj.nextInt();
+                    scannerObj.nextLine();
 
 
-                System.out.println("Enter the school name :");
-                String schoolName = scannerObj.nextLine();
+                    System.out.println("Enter the school name :");
+                    String schoolName = scannerObj.nextLine();
 
-                System.out.println("Enter the onOf students :");
-                int noOfStudents = scannerObj.nextInt();
-                scannerObj.nextLine();
+                    System.out.println("Enter the onOf students :");
+                    int noOfStudents = scannerObj.nextInt();
+                    scannerObj.nextLine();
 
-                System.out.println("Enter the  school rating :");
-                double schoolRating = scannerObj.nextDouble();
-                scannerObj.nextLine();
+                    System.out.println("Enter the  school rating :");
+                    double schoolRating = scannerObj.nextDouble();
+                    scannerObj.nextLine();
 
-                System.out.println("Enter the  school fee :");
-                double schoolFee = scannerObj.nextDouble();
-                scannerObj.nextLine();
+                    System.out.println("Enter the  school fee :");
+                    double schoolFee = scannerObj.nextDouble();
+                    scannerObj.nextLine();
 
-                System.out.println("Enter the onOf teachers :");
-                int noOfTeachers = scannerObj.nextInt();
-                scannerObj.nextLine();
+                    System.out.println("Enter the onOf teachers :");
+                    int noOfTeachers = scannerObj.nextInt();
+                    scannerObj.nextLine();
 
 
-                School school = new School(schoolId, schoolName, noOfStudents, schoolRating, schoolFee, noOfTeachers);
+                    School school = new School(schoolId, schoolName, noOfStudents, schoolRating, schoolFee, noOfTeachers);
 //
 //                if(positionOfSchool < schools.length){
 //                   schools[positionOfSchool] = school;
@@ -72,59 +76,182 @@ public class SchoolApp {
 //                    System.out.println("Schools Arrays is filled, Please try again later.....");
 //                }
 
-                schoolArrayList.add(school);
+                    schoolArrayList.add(school);
 
-
-
-            }else if (option == 2){
+                    break;
+                case 2:
 
 
 //                private int id;
 //                private String name;
 //                private int age;
+                    int userId = 0;
+                    String userName = "";
+                    int userAge=0;
+                    boolean check = false;
 
-                System.out.println("Enter the User Id : ");
-                int userId = scannerObj.nextInt();
-                scannerObj.nextLine();
+                    User user= new User( );
+                    while (!check){  // Exception Handling code
 
-                System.out.println("Enter the User Name : ");
-                String userName = scannerObj.nextLine();
+                        try{
 
-                System.out.println("Enter the User age : ");
-                int userAge = scannerObj.nextInt();
-                scannerObj.nextLine();
+                        if(user.getId() <= 0){
+                         System.out.println("Enter the User Id : ");
+                          userId = Integer.parseInt(scannerObj.next());
+                          user.setId(userId);
+                         }
 
-                User user= new User(userId, userName, userAge );
+                           if(user.getName() == null){
+                               System.out.println("Enter the User Name : ");
+                                userName = scannerObj.next();
+                                user.setName(userName);
+                           }
 
-                if(positionOfUser < users.length){
-                    users[positionOfUser] = user;
-                    positionOfUser++;
-                    System.out.println("User is successfully created...........!");
-                }else{
-                    System.out.println("Users Arrays is filled, Please try again later.....");
-                }
+                           if(user.getAge() == 0){
+                               System.out.println("Enter the User age : ");
+                               userAge = Integer.parseInt(scannerObj.next());
+                               user.setAge(userAge);
+                           }
+
+                            check = true;
+
+                       }catch (Exception e){
+                           System.out.println(e);
+                       }
+
+                    }
 
 
-            }else if(option == 3){
-                // logic to print all schools
-                System.out.println("This is trail version 2 update...!");
+                    if(positionOfUser < users.length){
+                        users[positionOfUser] = user;
+                        positionOfUser++;
+                        System.out.println("User is successfully created...........!");
+                    }else{
+                        System.out.println("Users Arrays is filled, Please try again later.....");
+                    }
 
-                for (int index =0; index < schoolArrayList.size(); index++){
-                    System.out.println(schoolArrayList.get(index));
-                }
 
-            }else if(option == 4 ){
-                // logic to show/print all users;
-               for (int index =0; index< positionOfUser; index++){
-                   System.out.println(users[index]);
-               }
+                    break;
+                case 3:
+                    // logic to print all schools
+                    System.out.println("This is trail version 2 update...!");
 
+                    for (int index =0; index < schoolArrayList.size(); index++){
+                        System.out.println(schoolArrayList.get(index));
+                    }
+                    break;
+                case 4:
+                    // logic to show/print all users;
+                    for (int index =0; index< positionOfUser; index++){
+                        System.out.println(users[index]);
+                    }
+                    break;
+                case 5:
+                    // logic to exit;
+                    System.out.println("Exit");
+                    stop = true;
+                    break;
+                default:
+                    break;
             }
-            else if(option == 5 ){
-                // logic to exit;
-                System.out.println("Exit");
-                stop = true;
-            }
+//
+//            if( option == 1){
+////                private int schoolId;
+////                private String schoolName;
+////                private int noOfStudents;
+////                private double schoolRating;
+////                private double schoolFee;
+////                private  int noOfTeachers;
+//
+//                System.out.println("Enter the school Id :");
+//                int schoolId = scannerObj.nextInt();
+//                scannerObj.nextLine();
+//
+//
+//                System.out.println("Enter the school name :");
+//                String schoolName = scannerObj.nextLine();
+//
+//                System.out.println("Enter the onOf students :");
+//                int noOfStudents = scannerObj.nextInt();
+//                scannerObj.nextLine();
+//
+//                System.out.println("Enter the  school rating :");
+//                double schoolRating = scannerObj.nextDouble();
+//                scannerObj.nextLine();
+//
+//                System.out.println("Enter the  school fee :");
+//                double schoolFee = scannerObj.nextDouble();
+//                scannerObj.nextLine();
+//
+//                System.out.println("Enter the onOf teachers :");
+//                int noOfTeachers = scannerObj.nextInt();
+//                scannerObj.nextLine();
+//
+//
+//                School school = new School(schoolId, schoolName, noOfStudents, schoolRating, schoolFee, noOfTeachers);
+////
+////                if(positionOfSchool < schools.length){
+////                   schools[positionOfSchool] = school;
+////                   positionOfSchool++;
+////                    System.out.println("School is successfully created...........!");
+////
+////                }else{
+////                    System.out.println("Schools Arrays is filled, Please try again later.....");
+////                }
+//
+//                schoolArrayList.add(school);
+//
+//
+//
+//            }else if (option == 2){
+//
+//
+////                private int id;
+////                private String name;
+////                private int age;
+//
+//                System.out.println("Enter the User Id : ");
+//                int userId = scannerObj.nextInt();
+//                scannerObj.nextLine();
+//
+//                System.out.println("Enter the User Name : ");
+//                String userName = scannerObj.nextLine();
+//
+//                System.out.println("Enter the User age : ");
+//                int userAge = scannerObj.nextInt();
+//                scannerObj.nextLine();
+//
+//                User user= new User(userId, userName, userAge );
+//
+//                if(positionOfUser < users.length){
+//                    users[positionOfUser] = user;
+//                    positionOfUser++;
+//                    System.out.println("User is successfully created...........!");
+//                }else{
+//                    System.out.println("Users Arrays is filled, Please try again later.....");
+//                }
+//
+//
+//            }else if(option == 3){
+//                // logic to print all schools
+//                System.out.println("This is trail version 2 update...!");
+//
+//                for (int index =0; index < schoolArrayList.size(); index++){
+//                    System.out.println(schoolArrayList.get(index));
+//                }
+//
+//            }else if(option == 4 ){
+//                // logic to show/print all users;
+//               for (int index =0; index< positionOfUser; index++){
+//                   System.out.println(users[index]);
+//               }
+//
+//            }
+//            else if(option == 5 ){
+//                // logic to exit;
+//                System.out.println("Exit");
+//                stop = true;
+//            }
         }
 
 

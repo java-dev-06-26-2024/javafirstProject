@@ -1,7 +1,5 @@
-package com.learning.day11;
+package com.learning.day11and12;
 
-
-import com.learning.day6and7and8.A;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

@@ -1,4 +1,4 @@
-package com.learning.day11;
+package com.learning.day11and12;
 
 public class CollectionFrameworkIntro {
 
