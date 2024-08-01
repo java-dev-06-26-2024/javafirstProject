@@ -43,6 +43,19 @@ public class ComparableVsComparator {
 
         System.out.println(students);
 
+        // step 1: loop through the datA.
+
+        for (int i =0; i < students.size(); i++){
+
+            Student s = students.get(i);
+
+            if( s.getRank() == 25){
+                System.out.println(s);
+                break;
+            }
+        }
+
+
 
 
     }

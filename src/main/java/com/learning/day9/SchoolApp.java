@@ -1,8 +1,7 @@
 package com.learning.day9;
 
 import java.util.ArrayList;
-import java.util.InputMismatchException;
-import java.util.Objects;
+
 import java.util.Scanner;
 
 public class SchoolApp {
@@ -121,7 +120,6 @@ public class SchoolApp {
 
                     }
 
-
                     if(positionOfUser < users.length){
                         users[positionOfUser] = user;
                         positionOfUser++;
@@ -129,7 +127,6 @@ public class SchoolApp {
                     }else{
                         System.out.println("Users Arrays is filled, Please try again later.....");
                     }
-
 
                     break;
                 case 3:
@@ -139,12 +136,14 @@ public class SchoolApp {
                     for (int index =0; index < schoolArrayList.size(); index++){
                         System.out.println(schoolArrayList.get(index));
                     }
+
                     break;
                 case 4:
                     // logic to show/print all users;
                     for (int index =0; index< positionOfUser; index++){
                         System.out.println(users[index]);
                     }
+
                     break;
                 case 5:
                     // logic to exit;
